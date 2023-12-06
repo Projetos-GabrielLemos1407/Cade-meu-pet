@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>CadêMeuPet.Chat</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="icon" href="img/favicon.svg" type="image/png">
+</head>
+<body>
+  <header class="header">
+    <div class="header-content">
+        <a href="home.html">
+            <img src="img/logo.png" alt="Logo" class="logo">
+          </a>
+        <h1>CadêMeu<span class="colored-letter">Pet?</span></h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Sobre</a></li>
+                <li><a href="https://cademeupetetecmcm.blogspot.com/" target="_blank">Blog</a></li>
+                <li><a href="home.html" class="botao-link">ACHAR MEU PET</a></li>
+                <li><a href="chat.html">Chat</a></li>    
+                <li><a href="contato.html">Contato</a></li>
+              </ul>        
+        </nav>
+        <div class="profile-area2" onclick="toggleProfileOptions()">
+            <img src="img/avatar1.jpg" class="profile-picture" title="Conta">
+            <div id="profile-options" class="profile-options invisible">
+              <img src="img/avatar1.jpg" class="profile-picture3" title="Conta">
+              <button onclick="redirectToConfig()">Configurações</button>
+              <button onclick="confirmLogout()">Sair da conta</button>                
+            </div>
+          </div> 
+</header>
+<div class="container">
+    <div class="contacts">
+        <div class="contact" onclick="updateChatHeader(1)">
+            <div class="contact-profile">
+                <img src="img/avatar1.jpg" class="contact-avatar">
+                <div class="contact-info">
+                    <h3 class="contact-name" id="contact-name-1">Gabriel Lemos  (Você)</h3>
+                    <p class="contact-status">Online</p>
+                </div>
+            </div>
+        </div>
+        <div class="contact" onclick="updateChatHeader(2)">
+            <div class="contact-profile">
+                <img src="img/avatar4.jpg" class="contact-avatar">
+                <div class="contact-info">
+                    <h3 class="contact-name" id="contact-name-2">Ana Julia</h3>
+                    <p class="contact-status">Offline</p>
+                </div>
+            </div>
+        </div>
+        <div class="contact" onclick="updateChatHeader(3)">
+            <div class="contact-profile">
+                <img src="img/avatar3.jpg" class="contact-avatar">
+                <div class="contact-info">
+                    <h3 class="contact-name" id="contact-name-3">Giulia Santana</h3>
+                    <p class="contact-status">Online</p>
+                </div>
+            </div>
+        </div>
+        <div class="contact" onclick="updateChatHeader(4)">
+            <div class="contact-profile">
+                <img src="img/avatar4.jpg" class="contact-avatar">
+                <div class="contact-info">
+                    <h3 class="contact-name" id="contact-name-4">Giulia Matos</h3>
+                    <p class="contact-status">Offline</p>
+                </div>
+            </div>
+        </div>
+        <div class="contact" onclick="updateChatHeader(5)">
+            <div class="contact-profile">
+                <img src="img/avatar5.jpg" class="contact-avatar">
+                <div class="contact-info">
+                    <h3 class="contact-name" id="contact-name-5">Anna Roberta</h3>
+                    <p class="contact-status">Online</p>
+                </div>
+            </div>
+        </div>
+        <!-- Resto dos contatos aqui -->
+    </div>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+    <div class="chat">
+        <div class="chat-header">
+            <div class="chat-header-info">
+                <img src="img/avatar1.jpg" alt="Foto de Perfil" class="chat-header-avatar">
+                <h3 class="chat-header-name" id="chat-header-name"></h3>
+                <p class="chat-header-status" id="chat-header-status"></p>
+            </div>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <!-- Aqui serão exibidas as mensagens do chat -->
+        </div>
+        <div class="chat-input">
+            <input type="text" id="message-input" class="box" placeholder="Digite uma mensagem" maxlength="150">
+            <button id="send-button" class="botao-button">Enviar</button>
+        </div>
+    </div>
+</div>
+<div class="footer" id="footer">
+    <!-- Conteúdo do footer aqui -->
+    &copy; 2023 CadêMeuPet. Todos os direitos reservados.
+    Este é o footer.
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
